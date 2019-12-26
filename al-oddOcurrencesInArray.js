@@ -3,16 +3,18 @@
   * @return {int} the element that was left unpaired
   */
 function solution(array = []) {
-  array.forEach((item) => {
-    const number = array.filter((number) => item === number);
+  let resultado = 0;
+ if (!array.length) return 0;
+  for(let i = 0 ; i < array.length; i++) {
+    // retrieving number of times
+    const number = array.filter((number) => array[i] === number);
+    // verifying if it is unpair
     if (number.length % 2) {
-      console.log('============================================');
-      console.log(`${number} haves ${number.length} ocurrences, besides haves an element unpaired`);
-      return item;
+      resultado = number[0];
+      break;
     }
-  });
-  return 0;
+  }
+  return resultado;
 }
-const a = solution([5, 4, 8, 9, 5, 9, 4, 8, 8]);
-console.log('==================respuesta==========================');
+const a = solution([5, 4, 8, 9, 5, 9, 4, 8, 8, 8, 8, 4]);
 console.log(a);
