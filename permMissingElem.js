@@ -1,23 +1,18 @@
 
-// function solution(A) {
-//     // write your code in JavaScript (Node.js 8.9.4)
-//     if(!A.length) return;
-//     if(A.length === 1) return;
-//
-//     let aux = {};
-//     for(let i = 0; i < A.length; i++) {
-//         if(!aux[A[i]]) {
-//             aux[A[i]] = 1;
-//         } else {
-//             return ;
-//         }
-//
-//     }
-//     for(let i = 1; i <= A.length; i++) {
-//         if(!aux[i]) return i;
-//      }
-//     return null ;
-// }
+function solutionA(A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    // if(!A.length) return 1;
+    // if(A.length === 1) return A[0] - 1;
+
+    let aux = {};
+    for(let i = 0; i < A.length; i++) {
+      aux[A[i]] = 1;
+    }
+    for(let i = 1; i <= A.length + 1; i++) {
+      if(!aux[i]) return i;
+    }
+    return 1;
+}
 function solution(A) {
   let smallest = 1;
   A = A.sort();
@@ -28,4 +23,4 @@ function solution(A) {
   }
   return smallest;
 }
-console.log(solution([3,2,1,7,1]))
+console.log(solutionA([ 4]))
