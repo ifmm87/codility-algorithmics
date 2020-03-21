@@ -14,3 +14,4 @@ function solution(A) {
     }
     return 1;
 }
+
