@@ -3,6 +3,7 @@ function solution(A,K) {
   let arrayLength = A.length ? A.length : 0;
   if(!arrayLength) return A;
   let iterations = (K % arrayLength);
+  console.log(arrayLength, iterations);
   if (iterations === 0) return A;
   let newA = [];
   A.forEach((element, index) => {
@@ -13,5 +14,5 @@ function solution(A,K) {
 }
 
 
-const res = solution([3, 8, 9, 7, 6], 3);
+const res = solution([3, 8, 9, 7, 6,1,2,3,4,5,6,7,8,9], 3);
 console.log(res);
