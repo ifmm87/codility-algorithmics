@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/ifmm87/codility-algorithmics/issues"
   },
-  "homepage": "https://github.com/ifmm87/codility-algorithmics#readme"
+  "homepage": "https://github.com/ifmm87/codility-algorithmics#readme",
+  "devDependencies": {}
 }
